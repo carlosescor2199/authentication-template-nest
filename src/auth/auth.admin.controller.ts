@@ -9,7 +9,7 @@ export class AuthAdminController {
   constructor(private readonly authService: AuthService) {}
 
   @Post('signup')
-  @Roles(UserRoles.ADMIN)
+  @Roles(UserRoles.SUPER_ADMIN)
   create(@Body() createAdminDto: SignUpDto) {
     const data = { ...createAdminDto, role: UserRoles.ADMIN };
     return this.authService.signUp(data);
