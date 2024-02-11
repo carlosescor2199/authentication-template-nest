@@ -3,6 +3,8 @@ import { AuthService } from './auth.service';
 import { SignInDto } from './dto/signInDto';
 import { SignUpDto } from './dto/signUpDto';
 import { Public } from './decorators/public.decorator';
+import { Roles } from './decorators/roles.decorator';
+import { UserRoles } from 'src/schemas/user.schema';
 
 @Controller('auth')
 export class AuthController {
